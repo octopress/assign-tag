@@ -4,6 +4,6 @@
 
 - Added support for Octopress docs.
 
-# 1.0.0 (2014-07-11)
+# 1.0.0 (2014-07-18)
 
 - Initial release.
