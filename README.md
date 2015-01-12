@@ -12,41 +12,49 @@ A more powerful assign liquid tag. Features:
 
 ## Installation
 
-Add this line to your application's Gemfile:
+If you're using bundler add this gem to your site's Gemfile in the `:jekyll_plugins` group:
 
-    gem 'octopress-assign-tag'
+    group :jekyll_plugins do
+      gem 'octopress-assign-tag'
+    end
 
-And then execute:
+Then install the gem with Bundler
 
     $ bundle
 
-Or install it yourself as:
+To install manually without bundler:
 
     $ gem install octopress-assign-tag
 
-Next add it to your gems list in Jekyll's `_config.yml`
+Then add the gem to your Jekyll configuration.
 
     gems:
-      - octopress-assign-tag
+      -octopress-assign-tag
 
 ## Usage
 
 Use the assign tag like normal.
 
-    {% assign var1 = 'awesome' %}     //=> 'awesome'
-    {% assign var2 = var1 | upcase %} //=> 'AWESOME'
+```
+{% assign var1 = 'awesome' %}     //=> 'awesome'
+{% assign var2 = var1 | upcase %} //=> 'AWESOME'
+```
 
 Conditionally assign variables.
 
-    {% assign linkpost = true if post.external-url %}
-    {% assign comments = true unless post.comments == false %}
-    {% assign url (post ? post.url : page.url) %}
+```
+{% assign linkpost = true if post.external-url %}
+{% assign comments = true unless post.comments == false %}
+{% assign url (post ? post.url : page.url) %}
+```
 
 Use fancy operators in assignment.
 
-    {% assign author = post.author || page.author || site.author %}
-    {% assign name ||= site.name %}
-    {% assign title_text += ' →' if linkpost %}
+```
+{% assign author = post.author || page.author || site.author %}
+{% assign name ||= site.name %}
+{% assign title_text += ' →' if linkpost %}
+```
 
 ## Contributing
 

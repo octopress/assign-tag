@@ -41,7 +41,7 @@ if defined? Octopress::Docs
   Octopress::Docs.add({
     name:        "Octopress Assign Tag",
     gem:         "octopress-assign-tag",
-    version:     Octopress::Tags::Asign::VERSION,
+    version:     Octopress::Tags::Assign::VERSION,
     description: "An improved assign liquid tag, featuring conditionals, concatenation, ternary asignment, and more.",
     path:        File.expand_path(File.join(File.dirname(__FILE__), "../")),
     source_url:  "https://github.com/octopress/assign-tag"
