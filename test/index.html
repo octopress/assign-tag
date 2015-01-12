@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 ## Simple assign
 yep → {% assign var1 = 'yep' %}{{ var1 }}
@@ -20,7 +20,7 @@ foo → {% assign var7 = baz || 'foo' %}{{ var7 }}
 yepyep → {% assign var1 += 'yep' %}{{ var1 }}
 
 ## Complex assignment
-awesome → {% assign var9 = (page.layout == 'nil' ? 'awesome' : 'lame' ) %}{{ var9 }}
+awesome → {% assign var9 = (page.layout == null ? 'awesome' : 'lame' ) %}{{ var9 }}
 AWESOME → {% assign var10 = var9 | upcase %}{{ var10 }}
 whatever-man → {% assign var11 = 'whatever man' || nil | replace:' ','-' %}{{ var11 }}
 

@@ -1,7 +1,7 @@
 module Octopress
   module Tags
-    module AssignTag
-      VERSION = "1.0.0"
+    module Assign
+      VERSION = "1.0.1"
     end
   end
 end

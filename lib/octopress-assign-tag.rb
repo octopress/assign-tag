@@ -4,7 +4,7 @@ require "jekyll"
 
 module Octopress
   module Tags
-    module AssignTag
+    module Assign
       class Tag < Liquid::Tag
         SYNTAX = /([[:word:]]+)\s*(=|\+=|\|\|=)\s*(.*)\s*/o
 
@@ -35,4 +35,15 @@ module Octopress
   end
 end
 
-Liquid::Template.register_tag('assign', Octopress::Tags::AssignTag::Tag)
+Liquid::Template.register_tag('assign', Octopress::Tags::Assign::Tag)
+
+if defined? Octopress::Docs
+  Octopress::Docs.add({
+    name:        "Octopress Assign Tag",
+    gem:         "octopress-assign-tag",
+    version:     Octopress::Tags::Asign::VERSION,
+    description: "An improved assign liquid tag, featuring conditionals, concatenation, ternary asignment, and more.",
+    path:        File.expand_path(File.join(File.dirname(__FILE__), "../")),
+    source_url:  "https://github.com/octopress/assign-tag"
+  })
+end

@@ -5,7 +5,7 @@ require 'octopress-assign-tag/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "octopress-assign-tag"
-  spec.version       = Octopress::Tags::AssignTag::VERSION
+  spec.version       = Octopress::Tags::Assign::VERSION
   spec.authors       = ["Brandon Mathis"]
   spec.email         = ["brandon@imathis.com"]
   spec.summary       = %q{A powerful replacement for the Liquid assign tag}
