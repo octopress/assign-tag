@@ -1,5 +1,6 @@
 ---
 layout: null
+test_array: [a, b, A, B]
 ---
 ## Simple assign
 yep → {% assign var1 = 'yep' %}{{ var1 }}
@@ -24,3 +25,5 @@ awesome → {% assign var9 = (page.layout == null ? 'awesome' : 'lame' ) %}{{ va
 AWESOME → {% assign var10 = var9 | upcase %}{{ var10 }}
 whatever-man → {% assign var11 = 'whatever man' || nil | replace:' ','-' %}{{ var11 }}
 
+## Filters on non-string variables
+{% assign items = page.test_array | sort %}{{ items }}
