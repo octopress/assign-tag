@@ -14,6 +14,7 @@ module Octopress
         end
 
         def render(context)
+
           return unless markup = TagHelpers::Conditional.parse(@markup, context)
 
           if markup =~ SYNTAX
