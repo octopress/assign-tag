@@ -9,5 +9,5 @@ exclude:
 
 # Build settings
 markdown: redcarpet
-gems:
+plugins:
   - octopress-assign-tag
